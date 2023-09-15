@@ -6,7 +6,8 @@ spec:
   nodeSelector:
     # TODO: minikube multi node로 실행해야함
     # kubernetes.io/hostname: k8s-node1
-    kubernetes.io/hostname: minikube
+    # minikube 노드 이름 규칙 minikube, minikube-m02, minikube-m03, ...
+    kubernetes.io/hostname: minikube-m02
   containers:
     - name: container
       image: tmkube/init
