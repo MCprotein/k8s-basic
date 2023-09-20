@@ -2,6 +2,8 @@
 
 Namespace마다 자원의 최대량을 제한
 
+ResourceQuota를 만들기 전에 해당 namespace
+
 ## LimitRange
 
 Namespace에 들어오는 Pod의 크기를 제한
