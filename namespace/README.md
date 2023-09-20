@@ -2,13 +2,20 @@
 
 Namespace마다 자원의 최대량을 제한
 
-ResourceQuota를 만들기 전에 해당 namespace
+ResourceQuota를 만들기 전에 해당 namespace에 pod가 존재하지 않도록 해야함
 
 ## LimitRange
 
 Namespace에 들어오는 Pod의 크기를 제한
 
 ResourceQuota와 LimitRange는 Cluster자체에도 설정 가능
+
+```sh
+kubectl describe limitrages -n nm-5
+```
+
+여러개의 limitRange가 존재하면 limit이랑 max 같은것들이 섞여서 예상치못하게 작동할 수 있음 -> 되다안되다할 수 있음
+예를들어 max는 lr-3 에서 (0.3Gi), default는 lr-5에서 적용됨
 
 ## Namespace
 
